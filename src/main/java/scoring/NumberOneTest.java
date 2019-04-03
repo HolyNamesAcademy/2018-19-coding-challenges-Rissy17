@@ -36,7 +36,7 @@ public class NumberOneTest {
             int target = 18;
 
             int[] expected = {1, 2};
-            int[] actual = one.findTwoValuesThatSumToTarget(numbers, target);
+            int[] actual = one.findTwoValuesThatSumToTarget(numbers,target);
 
             assertArrayEquals(expected, actual);
             SCORE++;

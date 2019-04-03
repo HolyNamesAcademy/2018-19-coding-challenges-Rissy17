@@ -23,6 +23,22 @@ public class NumberTwo {
      */
     public boolean evenlySpaced(int a, int b, int c){
         // Delete the line below and implement the method!
-        throw new UnsupportedOperationException();
+       if(a>b && c<b){
+           if(a-b==b-c)
+               return true;
+       }
+       if(b>a && c<a){
+           if(b-a==a-c)
+               return true;
+       }
+       if(c>b && a<b){
+           if(c-b==b-a)
+               return true;
+       }
+       if(c>a && b<a) {
+           if (c - a == a - b)
+               return true;
+       }
+       if()
     }
 }
