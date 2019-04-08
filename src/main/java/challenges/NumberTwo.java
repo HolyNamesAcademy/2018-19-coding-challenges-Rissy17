@@ -23,22 +23,35 @@ public class NumberTwo {
      */
     public boolean evenlySpaced(int a, int b, int c){
         // Delete the line below and implement the method!
-       if(a>b && c<b){
-           if(a-b==b-c)
-               return true;
-       }
-       if(b>a && c<a){
-           if(b-a==a-c)
-               return true;
-       }
-       if(c>b && a<b){
-           if(c-b==b-a)
-               return true;
-       }
-       if(c>a && b<a) {
-           if (c - a == a - b)
-               return true;
-       }
-       if()
-    }
+        int maximum= Math.max(a, Math.max(b,c));
+        int minimum = Math.min(a, Math.min(b,c));
+        int med= (a+b+c)-(maximum+minimum);
+
+        if(a==maximum && b==minimum){
+            if(a-c==c-b)
+                return true;
+        }
+        if(b==maximum && a==minimum){
+            if(b-c==c-a)
+                return true;
+        }
+        if(a==maximum && c==minimum){
+            if(a-b==b-c)
+                return true;
+        }
+
+        if(b==maximum && c==minimum){
+            if(b-a==a-c)
+                return true;
+        }
+        if(c==maximum && a==minimum){
+            if(c-b==b-a)
+                return true;
+        }
+        if(c==maximum && b==minimum){
+            if(c-a==a-b)
+                return true;
+        }
+        return false;
+        }
 }
