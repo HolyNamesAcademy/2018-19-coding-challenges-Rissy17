@@ -1,4 +1,5 @@
 package challenges;
+import java.util.Arrays;
 
 public class NumberFive {
 
@@ -30,6 +31,20 @@ public class NumberFive {
      */
     public boolean isAnagram(String word1, String word2) {
         // Delete the line below and implement the method!
-        throw new UnsupportedOperationException();
+       char w1 []= word1.toLowerCase().toCharArray();
+       char w2 []= word2.toLowerCase().toCharArray();
+
+       Arrays.sort(w1);
+       Arrays.sort(w2);
+
+       word1= new String(w1);
+       word2= new String(w2);
+
+      if(word1.equals(word2))
+          return true;
+      else
+          return false;
+
+
     }
 }
